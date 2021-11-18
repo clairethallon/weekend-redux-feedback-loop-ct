@@ -24,12 +24,20 @@ const understanding = (state = '', action) => {
     }
     return state;
 }
+const support = (state = '', action) => {
+    console.log('hello from support reducer');
+    if (action.type === 'SUPPORT_CHOICE') {
+        return action.payload;
+    }
+    return state;
+}
 // a store
 const storeInstance = createStore(
     combineReducers(
         {
             feeling,
-            understanding
+            understanding,
+            support
         }
     ),
     applyMiddleware(
