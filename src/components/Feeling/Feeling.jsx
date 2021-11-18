@@ -14,13 +14,17 @@ function Feeling() {
     const feeling = useSelector(store => store.feeling);
     const dispatch = useDispatch();
 
+    const [input, setInput] = useState(false);
+
     const handleChange = (event) => {
+        setInput(true);
         dispatch({
             type: 'FEELINGS_CHOICE',
             payload: event.target.value
         });
         console.log(event.target.value);
     }
+
 
     return (
         <div>
@@ -41,9 +45,10 @@ function Feeling() {
                     <MenuItem value="5">5</MenuItem>
                 </Select>
             </Box>
-            <Link to="/understanding"><Button variant="contained">Next</Button></Link>
-
-            <p>{feeling}</p>
+            {input ?
+                <Link to="/understanding"><Button variant="contained">Next</Button></Link> :
+                <Button variant="contained" disabled>Next</Button>
+            }
         </div>
     )
 }

@@ -13,8 +13,10 @@ function Support() {
     // const reducerName = useSelector(store => store.reducerName);
     const support = useSelector(store => store.support);
     const dispatch = useDispatch();
+    const [input, setInput] = useState(false);
 
     const handleChange = (event) => {
+        setInput(true);
         dispatch({
             type: 'SUPPORT_CHOICE',
             payload: event.target.value
@@ -41,7 +43,10 @@ function Support() {
                     <MenuItem value="5">5</MenuItem>
                 </Select>
             </Box>
-            <Link to="/comments"><Button variant="contained">Next</Button></Link>
+            {input ?
+                <Link to="/comments"><Button variant="contained">Next</Button></Link> :
+                <Button variant="contained" disabled>Next</Button>
+            }
             <p>{support}</p>
         </div>
     )

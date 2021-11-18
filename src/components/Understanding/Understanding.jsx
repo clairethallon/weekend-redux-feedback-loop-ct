@@ -14,8 +14,10 @@ function Understanding() {
     // const reducerName = useSelector(store => store.reducerName);
     const understanding = useSelector(store => store.understanding);
     const dispatch = useDispatch();
+    const [input, setInput] = useState(false);
 
     const handleChange = (event) => {
+        setInput(true);
         dispatch({
             type: 'UNDERSTANDING_CHOICE',
             payload: event.target.value
@@ -42,8 +44,10 @@ function Understanding() {
                     <MenuItem value="5">5</MenuItem>
                 </Select>
             </Box>
-            <Link to="/support"><Button variant="contained">Next</Button></Link>
-            <p>{understanding}</p>
+            {input ?
+                <Link to="/support"><Button variant="contained">Next</Button></Link> :
+                <Button variant="contained" disabled>Next</Button>
+            }
         </div>
     )
 }

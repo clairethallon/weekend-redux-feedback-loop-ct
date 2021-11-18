@@ -24,7 +24,7 @@ function Comments() {
     return (
         <div>
 
-            <h1>How well are you Comments the material?</h1>
+            <h1>Any comments you want to leave?</h1>
             <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={handleChange}>put your comments here</TextField>
             <Link to="/review"><Button variant="contained">Next</Button></Link>
 
