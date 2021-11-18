@@ -12,13 +12,11 @@ function Feeling() {
     // const reducerName = useSelector(store => store.reducerName);
     const feeling = useSelector(store => store.feeling);
     const dispatch = useDispatch();
-    const [selectedFeeling, setSelectedFeeling] = useState(0);
 
     const handleChange = (event) => {
-        setSelectedFeeling(event.target.value);
         dispatch({
             type: 'FEELINGS_CHOICE',
-            payload: { Feelings: selectedFeeling }
+            payload: event.target.value
         });
         console.log(event.target.value);
     }
@@ -31,7 +29,7 @@ function Feeling() {
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={selectedFeeling}
+                    value={feeling}
                     label="Age"
                     onChange={handleChange}
                 >
