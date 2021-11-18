@@ -31,13 +31,22 @@ const support = (state = '', action) => {
     }
     return state;
 }
+
+const comments = (state = [], action) => {
+    console.log('hello from comments reducer');
+    if (action.type === 'COMMENTS_FIELD') {
+        return [...state, action.payload];
+    }
+    return state;
+}
 // a store
 const storeInstance = createStore(
     combineReducers(
         {
             feeling,
             understanding,
-            support
+            support,
+            comments
         }
     ),
     applyMiddleware(
