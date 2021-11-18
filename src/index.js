@@ -9,9 +9,10 @@ import logger from 'redux-logger';
 
 
 // reducer holder
-const reducer = (state = [], action) => {
-    if (action.type === 'ADD_BOOK') {
-        return [...state, action.payload];
+const feeling = (state = '', action) => {
+    console.log('hello from feeling reducer');
+    if (action.type === 'FEELINGS_CHOICE') {
+        return action.payload;
     }
     return state;
 }
@@ -19,7 +20,7 @@ const reducer = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers(
         {
-            reducer
+            feeling
         }
     ),
     applyMiddleware(
@@ -29,9 +30,11 @@ const storeInstance = createStore(
 
 
 ReactDOM.render(
-    <Provider store={storeInstance}>
-        <App />
-    </Provider>,
+    <React.StrictMode>
+        <Provider store={storeInstance}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
 
     document.getElementById('root'));
 registerServiceWorker();
