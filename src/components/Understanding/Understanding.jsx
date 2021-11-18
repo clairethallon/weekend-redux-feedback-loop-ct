@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 
 
 function Understanding() {
@@ -40,7 +42,7 @@ function Understanding() {
                     <MenuItem value="5">5</MenuItem>
                 </Select>
             </Box>
-            <button>Next</button>
+            <Link to="/support"><Button variant="contained">Next</Button></Link>
             <p>{understanding}</p>
         </div>
     )
