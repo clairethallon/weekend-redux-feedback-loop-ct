@@ -14,6 +14,9 @@ const feeling = (state = '', action) => {
     if (action.type === 'FEELINGS_CHOICE') {
         return action.payload;
     }
+    if (action.type === 'EMPTY') {
+        return action.payload;
+    }
     return state;
 }
 
@@ -21,6 +24,9 @@ const feeling = (state = '', action) => {
 const understanding = (state = '', action) => {
     console.log('hello from understanding reducer');
     if (action.type === 'UNDERSTANDING_CHOICE') {
+        return action.payload;
+    }
+    if (action.type === 'EMPTY') {
         return action.payload;
     }
     return state;
@@ -32,6 +38,9 @@ const support = (state = '', action) => {
     if (action.type === 'SUPPORT_CHOICE') {
         return action.payload;
     }
+    if (action.type === 'EMPTY') {
+        return action.payload;
+    }
     return state;
 }
 // comments
@@ -39,6 +48,10 @@ const comments = (state = [], action) => {
     console.log('hello from comments reducer');
     if (action.type === 'COMMENTS_FIELD') {
         return [action.payload];
+    }
+    if (action.type === 'EMPTY') {
+        console.log('empty comments');
+        return action.payload;
     }
     return state;
 }

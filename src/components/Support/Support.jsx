@@ -47,7 +47,6 @@ function Support() {
                 <Link to="/comments"><Button variant="contained">Next</Button></Link> :
                 <Button variant="contained" disabled>Next</Button>
             }
-            <p>{support}</p>
         </div>
     )
 }
