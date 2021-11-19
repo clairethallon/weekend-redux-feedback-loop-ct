@@ -26,6 +26,7 @@ function Comments() {
 
             <h1>Any comments you want to leave?</h1>
             <TextField id="outlined-basic" label="Outlined" variant="outlined" onChange={handleChange}>put your comments here</TextField>
+            <Link to="/support"><Button variant="contained">Back</Button></Link>
             <Link to="/review"><Button variant="contained">Next</Button></Link>
 
 

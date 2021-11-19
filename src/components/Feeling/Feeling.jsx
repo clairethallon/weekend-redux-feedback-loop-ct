@@ -14,14 +14,30 @@ function Feeling() {
     const feeling = useSelector(store => store.feeling);
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        checkInput();
+    }, []);
+
     const [input, setInput] = useState(false);
 
+    const checkInput = () => {
+        console.log('in checkInput');
+        if (feeling === '') {
+            setInput(false);
+            return;
+        }
+        else {
+            setInput(true)
+            return;
+        }
+    }
+
     const handleChange = (event) => {
-        setInput(true);
         dispatch({
             type: 'FEELINGS_CHOICE',
             payload: event.target.value
         });
+        setInput(true)
         console.log(event.target.value);
     }
 

@@ -75,6 +75,8 @@ function Review() {
                     <ListItem>Support:  {support}/5</ListItem>
                     <ListItem>Comments:  {comments}</ListItem>
                 </List>
+                <Link to="/comments"><Button variant="contained">Back</Button></Link>
+
                 <Button variant="contained" onClick={submitFeedback}>Submit</Button>
                 <Modal
                     open={show}

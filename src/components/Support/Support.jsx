@@ -15,6 +15,22 @@ function Support() {
     const dispatch = useDispatch();
     const [input, setInput] = useState(false);
 
+    useEffect(() => {
+        checkInput();
+    }, []);
+
+    const checkInput = () => {
+        console.log('in checkInput');
+        if (support === '') {
+            setInput(false);
+            return;
+        }
+        else {
+            setInput(true)
+            return;
+        }
+    }
+
     const handleChange = (event) => {
         setInput(true);
         dispatch({
@@ -43,6 +59,8 @@ function Support() {
                     <MenuItem value="5">5</MenuItem>
                 </Select>
             </Box>
+            <Link to="/understanding"><Button variant="contained">Back</Button></Link>
+
             {input ?
                 <Link to="/comments"><Button variant="contained">Next</Button></Link> :
                 <Button variant="contained" disabled>Next</Button>
