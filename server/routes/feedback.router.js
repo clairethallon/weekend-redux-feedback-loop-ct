@@ -39,4 +39,16 @@ router.delete('/:id', (req, res) => {
     })
 });// DELETE Route
 
+// PUT route 
+router.put('/:id', (req, res) => {
+    console.log('in PUT,', req.params);
+    const queryString = `UPDATE "feedback" SET flagged = NOT flagged WHERE id='${req.params.id}';`;
+    pool.query(queryString).then((results) => {
+        res.sendStatus(200);
+    }).catch((err) => {
+        console.log('error in PUT', err);
+        res.sendStatus(500);
+    })
+});// PUT Route
+
 module.exports = router;

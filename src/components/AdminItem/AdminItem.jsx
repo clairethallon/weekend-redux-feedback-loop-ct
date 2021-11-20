@@ -23,7 +23,25 @@ function AdminItem(props) {
 
     const deleteItem = () => {
         console.log('in deleteItem');
-        axios.delete(`/api/feedback/${props.adminitem.id}`, props.adminitem).then((response) => {
+        if (confirm('are you sure you want to delete?')) {
+            axios.delete(`/api/feedback/${props.adminitem.id}`, props.adminitem).then((response) => {
+                console.log(response);
+                props.getFeedback();
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
+        else {
+            return;
+        }
+
+
+
+    }
+
+    const flagItem = () => {
+        console.log('in flagItem');
+        axios.put(`/api/feedback/${props.adminitem.id}`, props.adminitem).then((response) => {
             console.log(response);
             props.getFeedback();
         }).catch((err) => {
@@ -31,6 +49,7 @@ function AdminItem(props) {
         })
 
     }
+
 
 
     return (
@@ -49,7 +68,9 @@ function AdminItem(props) {
                 <TableCell align="right">{props.adminitem.understanding}</TableCell>
                 <TableCell align="right">{props.adminitem.support}</TableCell>
                 <TableCell align="right">{props.adminitem.comments}</TableCell>
-                <TableCell align="right"><Button onClick={deleteItem}>🗑</Button></TableCell>
+                <TableCell align="right"><Button onClick={flagItem}>{JSON.stringify(props.adminitem.flagged)}</Button></TableCell>
+                <TableCell align="right"><Button onClick={deleteItem}>Delete 🗑</Button></TableCell>
+
 
             </TableRow>
 

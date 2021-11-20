@@ -15,7 +15,6 @@ import '../Admin/Admin.css';
 
 
 
-
 function Admin() {
 
     // const reducerName = useSelector(store => store.reducerName);
@@ -58,14 +57,15 @@ function Admin() {
                     <TableHead>
                         <TableRow>
                             <TableCell>Feedback Id</TableCell>
-                            <TableCell align="right">Feeling</TableCell>
-                            <TableCell align="right">Understanding</TableCell>
-                            <TableCell align="right">Support</TableCell>
-                            <TableCell align="right">Comments</TableCell>
-                            <TableCell align="right"></TableCell>
+                            <TableCell align="center">Feeling</TableCell>
+                            <TableCell align="center">Understanding</TableCell>
+                            <TableCell align="center">Support</TableCell>
+                            <TableCell align="center">Comments</TableCell>
+                            <TableCell align="center">Flagged</TableCell>
+                            <TableCell align="center"></TableCell>
+
                         </TableRow>
                     </TableHead>
-
                     <TableBody>
                         {admin.map(adminitem => (<AdminItem adminitem={adminitem} getFeedback={getFeedback} />))}
                     </TableBody>
