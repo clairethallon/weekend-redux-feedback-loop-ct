@@ -4,7 +4,8 @@ const pool = require('../modules/pool');
 
 // GET all submissions
 router.get('/', (req, res) => {
-    let queryString = `SELECT * FROM feedback ORDER BY id`;
+    console.log('in GET');
+    let queryString = `SELECT * FROM feedback ORDER BY id DESC`;
     pool.query(queryString).then((results) => {
         res.send(results.rows);
     }).catch((err) => {

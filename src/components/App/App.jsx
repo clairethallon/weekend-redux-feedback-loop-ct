@@ -5,6 +5,8 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Admin from '../Admin/Admin';
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Review from '../Review/Review';
 
@@ -24,6 +26,7 @@ function App() {
           <Route path="/support" element={<Support />}></Route>
           <Route path="/comments" element={<Comments />}></Route>
           <Route path="/review" element={<Review />}></Route>
+          <Route path="/admin" element={<Admin />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

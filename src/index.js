@@ -55,6 +55,15 @@ const comments = (state = [], action) => {
     }
     return state;
 }
+
+// comments
+const admin = (state = [], action) => {
+    console.log('hello from admin reducer');
+    if (action.type === 'GET_FEEDBACK_LIST') {
+        return action.payload;
+    }
+    return state;
+}
 // a store
 const storeInstance = createStore(
     combineReducers(
@@ -62,7 +71,8 @@ const storeInstance = createStore(
             feeling,
             understanding,
             support,
-            comments
+            comments,
+            admin
         }
     ),
     applyMiddleware(
