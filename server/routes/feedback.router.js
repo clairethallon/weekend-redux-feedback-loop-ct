@@ -14,17 +14,29 @@ router.get('/', (req, res) => {
     })
 })
 
-
+// POST feedback 
 router.post('/', (req, res) => {
     console.log('in POST,', req.body);
     let queryString = 'INSERT INTO "feedback" (feeling, understanding, support, comments) VALUES($1, $2, $3, $4)';
     let values = [req.body.feeling, req.body.understanding, req.body.support, req.body.comments];
     pool.query(queryString, values).then((results) => {
         res.sendStatus(201);
-    }).catch((results) => {
-        console.log('error in PUT');
+    }).catch((err) => {
+        console.log('error in PUT', err);
         res.sendStatus(500);
     })
-});// END PUT Route
+});// END POST Route
+
+// DELETE route 
+router.delete('/:id', (req, res) => {
+    console.log('in DELETE,', req.params.id);
+    const queryString = `DELETE FROM "feedback" WHERE id='${req.params.id}';`;
+    pool.query(queryString).then((results) => {
+        res.sendStatus(200);
+    }).catch((err) => {
+        console.log('error in DELETE', err);
+        res.sendStatus(500);
+    })
+});// DELETE Route
 
 module.exports = router;

@@ -8,6 +8,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import axios from 'axios';
+
+
 
 
 
@@ -16,9 +20,17 @@ function AdminItem(props) {
     // const reducerName = useSelector(store => store.reducerName);
 
     const dispatch = useDispatch();
-    const AdminItem = useSelector(store => store.AdminItem);
 
+    const deleteItem = () => {
+        console.log('in deleteItem');
+        axios.delete(`/api/feedback/${props.adminitem.id}`, props.adminitem).then((response) => {
+            console.log(response);
+            props.getFeedback();
+        }).catch((err) => {
+            console.log(err);
+        })
 
+    }
 
 
     return (
@@ -37,6 +49,8 @@ function AdminItem(props) {
                 <TableCell align="right">{props.adminitem.understanding}</TableCell>
                 <TableCell align="right">{props.adminitem.support}</TableCell>
                 <TableCell align="right">{props.adminitem.comments}</TableCell>
+                <TableCell align="right"><Button onClick={deleteItem}>🗑</Button></TableCell>
+
             </TableRow>
 
         </ >

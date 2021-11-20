@@ -11,6 +11,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import '../Admin/Admin.css';
 
 
 
@@ -53,7 +54,7 @@ function Admin() {
             {/* <p>results: {admin}</p> */}
 
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table sx={{ minWidth: 650 }} aria-label="simple table" className="adminTable" >
                     <TableHead>
                         <TableRow>
                             <TableCell>Feedback Id</TableCell>
@@ -61,11 +62,12 @@ function Admin() {
                             <TableCell align="right">Understanding</TableCell>
                             <TableCell align="right">Support</TableCell>
                             <TableCell align="right">Comments</TableCell>
+                            <TableCell align="right"></TableCell>
                         </TableRow>
                     </TableHead>
 
                     <TableBody>
-                        {admin.map(adminitem => (<AdminItem adminitem={adminitem} />))}
+                        {admin.map(adminitem => (<AdminItem adminitem={adminitem} getFeedback={getFeedback} />))}
                     </TableBody>
                 </Table>
             </TableContainer>
