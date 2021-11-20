@@ -51,7 +51,6 @@ function Admin() {
 
             <h1 >Admin</h1>
             {/* <p>results: {admin}</p> */}
-            {admin.map(adminitem => (<AdminItem adminitem={adminitem} />))}
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -64,19 +63,9 @@ function Admin() {
                             <TableCell align="right">Comments</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
-                        <TableRow
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                row name
-              </TableCell>
-                            <TableCell align="right">1</TableCell>
-                            <TableCell align="right">2</TableCell>
-                            <TableCell align="right">3</TableCell>
-                            <TableCell align="right">4</TableCell>
-                        </TableRow>
 
+                    <TableBody>
+                        {admin.map(adminitem => (<AdminItem adminitem={adminitem} />))}
                     </TableBody>
                 </Table>
             </TableContainer>

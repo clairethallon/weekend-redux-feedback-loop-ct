@@ -1,14 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
-import { List } from '@mui/material';
-import { ListItem } from '@mui/material';
-import axios from 'axios';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 
 
@@ -23,14 +22,24 @@ function AdminItem(props) {
 
 
     return (
-        <div>
+        <>
 
-            <h1 >AdminItem</h1>
-            <h2>{JSON.stringify(props)}</h2>
+            {/* <h1>AdminItem</h1> */}
+            {/* <h2>{JSON.stringify(props)}</h2> */}
 
-            {/* <p>results: {AdminItem}</p> */}
+            <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+                <TableCell component="th" scope="row">
+                    {props.adminitem.id}
+                </TableCell>
+                <TableCell align="right">{props.adminitem.feeling}</TableCell>
+                <TableCell align="right">{props.adminitem.understanding}</TableCell>
+                <TableCell align="right">{props.adminitem.support}</TableCell>
+                <TableCell align="right">{props.adminitem.comments}</TableCell>
+            </TableRow>
 
-        </div >
+        </ >
     )
 }
 
