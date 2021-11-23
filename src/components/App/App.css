@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: Monserrat, Courier New, Courier, monospace;
+  font-family: Playfair Display, Monserrat, Courier New, Courier, monospace;
   margin-left: 10%;
   margin-right: 10%;
 
@@ -17,15 +17,16 @@
 background-color: transparent;
 background-size: cover;
   min-height: 80px;
-  padding: 15px;
+  padding-top: 15px;
   color: rgb(54, 42, 59);
-  margin-bottom: 5px;
   font-size: xx-large;
   
 }
 
 .App-title {
   font-size: 2em;
+  color: black;
+  padding: 15px;
  
 }
 
@@ -37,16 +38,15 @@ background-size: cover;
 }
 
 h4 {
-  /* color: rgb(70, 55, 78); */
-  font-family:Courier New, Courier, monospace;
+  font-family: Courier New, Courier, monospace;
   font-style: italic;
 }
 h1{
-  font-family:Courier New, Courier, monospace;
+  font-family: Courier New, Courier, monospace;
 }
+
 .reviewList{
   align-items: center;
-  /* background-color:#d0d1d5;   */
 
 }
 
@@ -54,7 +54,6 @@ h1{
   color: rgb(70, 55, 78);
 
   margin-left: 20px;
-  /* background-color:#acc8d4; */
   display: flex;
   justify-content: center;
   font-family:Courier New, Courier, monospace;
@@ -64,10 +63,6 @@ h1{
 
 .mainInputDiv{
   margin-top: 20px;
-  /* background-color:#d0d1d5;   */
-  /* background-color:#acc8d4; */
-
-
 }
 
 #demo-simple-select-label{
@@ -76,7 +71,6 @@ h1{
 }
 
 #demo-simple-select{
-  /* background-color: #d4e3e7; */
   outline: 2px rgb(70, 55, 78);
 
   color: rgb(70, 55, 78);
@@ -95,15 +89,3 @@ h1{
   border-radius: 10px;
 
 }
-/* 
-.button-test{
-  border-radius: 5;
-  background-color: #ff9d5c;
-color: black;
-margin-top: 50px;
-margin-left: 15px;
-padding: 5px 30px;
-font-size: 24px;
-font-family: Courier New;
-text-decoration: none;
-} */

@@ -31,7 +31,8 @@ function Comments() {
                     <TextField id="outlined-basic" label="Type comments here" variant="outlined" onChange={handleChange}
                         style={{
                             borderRadius: 5,
-                            backgroundColor: "#d4e3e7",
+                            backgroundColor: "white",
+                            fontFamily: 'Courier New',
                             marginTop: "30px"
                         }}
                     ></TextField>

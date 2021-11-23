@@ -73,7 +73,7 @@ function Review() {
             <div className="reviewList">
                 <List style={{
                     borderRadius: 5,
-                    backgroundColor: "#d4e3e7",
+                    backgroundColor: "white",
                     marginTop: "30px",
                     marginLeft: "150px",
                     marginRight: "150px",
@@ -85,20 +85,34 @@ function Review() {
                     <ListItem>Support:  {support}/5</ListItem>
                     <ListItem>Comments:  {comments}</ListItem>
                 </List>
-                <Link to="/comments" style={{
-                    textDecoration: "none"
-                }}><Button variant="contained"
-                    style={{
-                        borderRadius: 5,
-                        backgroundColor: "#4c7c91",
-                        color: "black",
-                        marginTop: "50px",
-                        marginRight: "10px",
-                        padding: "5px 30px",
-                        fontSize: "24px",
-                        fontFamily: 'Courier New',
-                        textDecoration: 'none'
-                    }}>Back</Button></Link>
+                {submitted ?
+                    <Link to="/comments" style={{
+                        textDecoration: "none"
+                    }}><Button variant="contained"
+                        style={{
+                            borderRadius: 5,
+                            color: "black",
+                            marginTop: "50px",
+                            marginRight: "10px",
+                            padding: "5px 30px",
+                            fontSize: "24px",
+                            fontFamily: 'Courier New',
+                            textDecoration: 'none'
+                        }} disabled>Back</Button></Link> :
+                    <Link to="/comments" style={{
+                        textDecoration: "none"
+                    }}><Button variant="contained"
+                        style={{
+                            borderRadius: 5,
+                            backgroundColor: "#4c7c91",
+                            color: "black",
+                            marginTop: "50px",
+                            marginRight: "10px",
+                            padding: "5px 30px",
+                            fontSize: "24px",
+                            fontFamily: 'Courier New',
+                            textDecoration: 'none'
+                        }}>Back</Button></Link>}
                 {submitted ?
                     <Button variant="contained" onClick={submitFeedback}
                         style={{
