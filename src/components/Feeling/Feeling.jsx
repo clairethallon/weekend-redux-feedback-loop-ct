@@ -48,8 +48,8 @@ function Feeling() {
         // <div className="mainInputDiv" >
         <div className="inputPadding">
             <h1>How are you feeling today?</h1>
-            <h2>(on a scale from 1-5)</h2>
-            <div >
+            {/* <h2>(on a scale from 1-5)</h2> */}
+            <div>
                 <Box sx={{ minWidth: 250 }}>
                     <FormControl sx={{ minWidth: 250 }} style={{
                         marginTop: "30px"
