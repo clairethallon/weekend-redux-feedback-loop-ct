@@ -45,14 +45,18 @@ function Feeling() {
 
 
     return (
-        <div className="mainInputDiv" >
+        // <div className="mainInputDiv" >
+        <div className="inputPadding">
             <h1>How are you feeling today?</h1>
             <h2>(on a scale from 1-5)</h2>
-            <div className="inputDiv">
+            <div >
                 <Box sx={{ minWidth: 250 }}>
-                    <FormControl fullWidth>
+                    <FormControl sx={{ minWidth: 250 }} style={{
+                        marginTop: "30px"
+                    }}>
 
-                        <InputLabel id="demo-simple-select-label">Feeling</InputLabel>
+                        <InputLabel id="demo-simple-select-label"
+                        >Feeling</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
@@ -74,7 +78,7 @@ function Feeling() {
                             borderRadius: 5,
                             backgroundColor: "#ff9d5c",
                             color: "black",
-                            marginTop: "3px",
+                            marginTop: "50px",
                             marginLeft: "15px",
                             padding: "5px 30px",
                             fontSize: "24px",
@@ -83,8 +87,19 @@ function Feeling() {
                         }}
                         variant="contained"
                     >Next</Button></Link> :
-                    <p></p>
+                    <Button variant="contained"
+                        style={{
+                            borderRadius: 5,
+                            marginTop: "50px",
+                            marginLeft: "15px",
+                            padding: "5px 30px",
+                            fontSize: "24px",
+                            fontFamily: 'Courier New',
+                            textDecoration: 'none'
+                        }} disabled>Next</Button>
                 }
+                <p></p>
+
             </div>
 
         </div >

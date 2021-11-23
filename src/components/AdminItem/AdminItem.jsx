@@ -67,7 +67,8 @@ function AdminItem(props) {
                 <TableCell align="right">{props.adminitem.understanding}</TableCell>
                 <TableCell align="right">{props.adminitem.support}</TableCell>
                 <TableCell align="right">{props.adminitem.comments}</TableCell>
-                <TableCell align="right"><Button onClick={flagItem}>{JSON.stringify(props.adminitem.flagged)}</Button></TableCell>
+                <TableCell align="right"><Button onClick={flagItem}
+                >{JSON.stringify(props.adminitem.flagged)}</Button></TableCell>
                 <TableCell align="right"><Button onClick={deleteItem}>Delete 🗑</Button></TableCell>
 
 

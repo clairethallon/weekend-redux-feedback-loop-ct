@@ -51,7 +51,12 @@ function Admin() {
             {/* <p>results: {admin}</p> */}
 
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table" >
+                <Table sx={{ minWidth: 650 }} aria-label="simple table" style={{
+                    backgroundColor: "#d4e3e7",
+                    fontSize: "large",
+                    // marginLeft: "50px",
+                    color: "black"
+                }}>
                     <TableHead>
                         <TableRow>
                             <TableCell>Feedback Id</TableCell>

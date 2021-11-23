@@ -6,7 +6,6 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Admin from '../Admin/Admin';
-
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Review from '../Review/Review';
 

@@ -2,17 +2,21 @@
   text-align: center;
   background-color:#acc8d4;
   font-family:'Courier New', Courier, monospace;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+
 
 }
 .test{
   background-color:#acc8d4;
+  background-image: url('https://wallpaperaccess.com/full/812960.jpg');
+
   /* background-image: url('https://wallpaperaccess.com/full/812960.jpg'); */
   background-size: cover;
 
-  
-
-
 }
+
 
 .App-header {
   background-image: url('https://wallpaperaccess.com/full/812960.jpg');
@@ -47,7 +51,7 @@ h1{
   font-family:'Courier New', Courier, monospace;
 }
 .reviewList{
-  text-align: center;
+  align-items: center;
   /* background-color:#d0d1d5;   */
 
 }
@@ -56,7 +60,7 @@ h1{
   color: rgb(70, 55, 78);
 
   margin-left: 20px;
-  background-color:#acc8d4;
+  /* background-color:#acc8d4; */
   display: flex;
   justify-content: center;
   font-family:'Courier New', Courier, monospace;
@@ -74,8 +78,8 @@ h1{
 
 .mainInputDiv{
   margin-top: 20px;
-  background-color:#d0d1d5;  
-  background-color:#acc8d4;
+  /* background-color:#d0d1d5;   */
+  /* background-color:#acc8d4; */
 
 
 }
@@ -86,7 +90,7 @@ h1{
 }
 
 #demo-simple-select{
-  background-color: #d4e3e7;
+  /* background-color: #d4e3e7; */
   outline: 2px rgb(70, 55, 78);
 
   color: rgb(70, 55, 78);
@@ -95,6 +99,10 @@ h1{
 
 .select{
   background-color: #acc8d4;
+
+}
+.inputPadding{
+  padding-bottom: 50px;
 
 
 }
