@@ -6,6 +6,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import '../App/App.css';
+import FormControl from '@mui/material/FormControl';
 
 
 function Feeling() {
@@ -43,29 +45,49 @@ function Feeling() {
 
 
     return (
-        <div>
+        <div className="mainInputDiv" >
             <h1>How are you feeling today?</h1>
-            <Box sx={{ minWidth: 250 }}>
-                <InputLabel id="demo-simple-select-label">Feeling</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={feeling}
-                    label="Age"
-                    onChange={handleChange}
-                >
-                    <MenuItem value="1">1</MenuItem>
-                    <MenuItem value="2">2</MenuItem>
-                    <MenuItem value="3">3</MenuItem>
-                    <MenuItem value="4">4</MenuItem>
-                    <MenuItem value="5">5</MenuItem>
-                </Select>
-            </Box>
-            {input ?
-                <Link to="/understanding"><Button variant="contained">Next</Button></Link> :
-                <Button variant="contained" disabled>Next</Button>
-            }
-        </div>
+            <h2>(on a scale from 1-5)</h2>
+            <div className="inputDiv">
+                <Box sx={{ minWidth: 250 }}>
+                    <FormControl fullWidth>
+
+                        <InputLabel id="demo-simple-select-label">Feeling</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={feeling}
+                            label="Age"
+                            onChange={handleChange}
+                        >
+                            <MenuItem className="select" value="1">1</MenuItem>
+                            <MenuItem className="select" value="2">2</MenuItem>
+                            <MenuItem className="select" value="3">3</MenuItem>
+                            <MenuItem className="select" value="4">4</MenuItem>
+                            <MenuItem className="select" value="5">5</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
+                {input ?
+                    <Link to="/understanding" style={{ textDecoration: "none" }}><Button
+                        style={{
+                            borderRadius: 5,
+                            backgroundColor: "#ff9d5c",
+                            color: "black",
+                            marginTop: "3px",
+                            marginLeft: "15px",
+                            padding: "5px 30px",
+                            fontSize: "24px",
+                            fontFamily: 'Courier New',
+                            textDecoration: 'none'
+                        }}
+                        variant="contained"
+                    >Next</Button></Link> :
+                    <p></p>
+                }
+            </div>
+
+        </div >
     )
 }
 

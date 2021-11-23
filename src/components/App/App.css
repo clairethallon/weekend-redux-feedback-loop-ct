@@ -1,27 +1,100 @@
 .App {
   text-align: center;
+  background-color:#acc8d4;
+  font-family:'Courier New', Courier, monospace;
+
+}
+.test{
+  background-color:#acc8d4;
+  /* background-image: url('https://wallpaperaccess.com/full/812960.jpg'); */
+  background-size: cover;
+
+  
+
+
 }
 
 .App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+  background-image: url('https://wallpaperaccess.com/full/812960.jpg');
+background-size: cover;
+  min-height: 80px;
+  padding: 15px;
+  color: rgb(70, 55, 78);
+  margin-bottom: 5px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: xx-large;
+  
 }
 
 .App-title {
   font-size: 2em;
+ 
 }
 
 .App-intro {
   font-size: large;
+  /* background-color:#d0d1d5;   */
+
+ 
 }
 
 h4 {
+  color: rgb(70, 55, 78);
+  font-family:'Courier New', Courier, monospace;
   font-style: italic;
 }
-
+h1{
+  font-family:'Courier New', Courier, monospace;
+}
 .reviewList{
   text-align: center;
+  /* background-color:#d0d1d5;   */
+
+}
+
+.inputDiv{
+  color: rgb(70, 55, 78);
+
+  margin-left: 20px;
+  background-color:#acc8d4;
+  display: flex;
+  justify-content: center;
+  font-family:'Courier New', Courier, monospace;
+
+}
+.nextButton{
+  display: flex;
+  justify-content:baseline;
+    border-radius: 5;
+    background-color: "#acc8d4";
+    margin-left: "10px";
+    /* padding: "18px 36px"; */
+    font-size: "18px";
+}
+
+.mainInputDiv{
+  margin-top: 20px;
+  background-color:#d0d1d5;  
+  background-color:#acc8d4;
+
+
+}
+
+#demo-simple-select-label{
+  font-size: large;
+  color: black
+}
+
+#demo-simple-select{
+  background-color: #d4e3e7;
+  outline: 2px rgb(70, 55, 78);
+
+  color: rgb(70, 55, 78);
+
+}
+
+.select{
+  background-color: #acc8d4;
+
+
 }
